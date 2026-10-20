@@ -1,0 +1,44 @@
+[
+  {
+    "specversion": "1.0",
+    "id": "4e925ee8-f742-46c1-8dd2-f6879a436f2e",
+    "source": "urn:weather-platform:dbt-gold-mart",
+    "type": "com.energy.salesforce.trading.hdd_revision_alert",
+    "time": "2026-10-20T19:53:57.422637+00:00",
+    "datacontenttype": "application/json",
+    "kafka_topic": "salesforce.crm.energy_trading_alert",
+    "kafka_partition_key": "UK-WIND-01",
+    "data": {
+      "asset_id": "UK-WIND-01",
+      "asset_name": "Dogger Bank Offshore Wind",
+      "asset_type": "Offshore_Wind",
+      "risk_classification": "CRITICAL_STORM_RISK",
+      "hdd_00z_baseline": 1.35,
+      "hdd_12z_revised": 1.84,
+      "hdd_surge_delta": 0.49,
+      "min_pressure_hpa": 997.3,
+      "trading_recommendation": "LONG_UK_NBP_GAS_DEMAND"
+    }
+  },
+  {
+    "specversion": "1.0",
+    "id": "5b127054-9e59-4438-8822-3d18397e4ad9",
+    "source": "urn:weather-platform:dbt-gold-mart",
+    "type": "com.energy.salesforce.trading.hdd_revision_alert",
+    "time": "2026-10-20T19:53:57.422704+00:00",
+    "datacontenttype": "application/json",
+    "kafka_topic": "salesforce.crm.energy_trading_alert",
+    "kafka_partition_key": "UK-WIND-02",
+    "data": {
+      "asset_id": "UK-WIND-02",
+      "asset_name": "Moray East Offshore Wind",
+      "asset_type": "Offshore_Wind",
+      "risk_classification": "CRITICAL_STORM_RISK",
+      "hdd_00z_baseline": 2.64,
+      "hdd_12z_revised": 3.71,
+      "hdd_surge_delta": 1.07,
+      "min_pressure_hpa": 992.9,
+      "trading_recommendation": "LONG_UK_NBP_GAS_DEMAND"
+    }
+  }
+]

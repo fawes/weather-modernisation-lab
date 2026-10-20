@@ -1,0 +1,42 @@
+[
+  {
+    "specversion": "1.0",
+    "id": "0821fa15-2419-4edd-8786-1cdc8dc04618",
+    "source": "urn:weather-platform:north-sea-wave-engine",
+    "type": "com.energy.sap.offshore.maintenance.halt",
+    "time": "2026-10-20T19:53:57.422361+00:00",
+    "datacontenttype": "application/json",
+    "kafka_topic": "sap.pm.offshore_work_order_halt",
+    "kafka_partition_key": "NS-PLAT-02",
+    "data": {
+      "sap_plant_code": "NS-PLAT-02",
+      "facility_name": "Forties Charlie Platform (Central NS)",
+      "hazard_type": "SIGNIFICANT_WAVE_HEIGHT_BREACH_5M",
+      "peak_wave_height_m": 7.869999885559082,
+      "peak_wind_speed_ms": 29.799999237060547,
+      "breach_hours": 12,
+      "suspend_from_utc": "2026-10-20 07:00:00",
+      "sap_action": "HOLD_HELICOPTER_AND_VESSEL_DISPATCH"
+    }
+  },
+  {
+    "specversion": "1.0",
+    "id": "3ae6e86a-9c86-4bcf-9a3b-c1c362db8d52",
+    "source": "urn:weather-platform:north-sea-wave-engine",
+    "type": "com.energy.sap.offshore.maintenance.halt",
+    "time": "2026-10-20T19:53:57.422521+00:00",
+    "datacontenttype": "application/json",
+    "kafka_topic": "sap.pm.offshore_work_order_halt",
+    "kafka_partition_key": "NS-PLAT-03",
+    "data": {
+      "sap_plant_code": "NS-PLAT-03",
+      "facility_name": "Ekofisk Complex (Norwegian Sector)",
+      "hazard_type": "SIGNIFICANT_WAVE_HEIGHT_BREACH_5M",
+      "peak_wave_height_m": 5.889999866485596,
+      "peak_wind_speed_ms": 23.5,
+      "breach_hours": 7,
+      "suspend_from_utc": "2026-10-20 12:00:00",
+      "sap_action": "HOLD_HELICOPTER_AND_VESSEL_DISPATCH"
+    }
+  }
+]

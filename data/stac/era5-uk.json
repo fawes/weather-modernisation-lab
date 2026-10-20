@@ -1,0 +1,76 @@
+{
+  "stac_version": "1.0.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/datacube/v2.2.0/schema.json"
+  ],
+  "type": "Feature",
+  "id": "era5-uk",
+  "bbox": [
+    -10.0,
+    49.0,
+    2.0,
+    60.0
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -10.0,
+          49.0
+        ],
+        [
+          2.0,
+          49.0
+        ],
+        [
+          2.0,
+          60.0
+        ],
+        [
+          -10.0,
+          60.0
+        ],
+        [
+          -10.0,
+          49.0
+        ]
+      ]
+    ]
+  },
+  "properties": {
+    "title": "ECMWF ERA5 UK Surface Meteorology Cube (t2m, msl)",
+    "description": "Chunked Zarr store covering UK bounding box at 0.25 degree resolution.",
+    "start_datetime": "2026-07-15T00:00:00Z",
+    "end_datetime": "2026-07-15T23:00:00Z",
+    "cube:variables": {
+      "msl": {
+        "dimensions": [
+          "time",
+          "latitude",
+          "longitude"
+        ],
+        "units": "Pa",
+        "long_name": "Mean sea level pressure"
+      },
+      "t2m": {
+        "dimensions": [
+          "time",
+          "latitude",
+          "longitude"
+        ],
+        "units": "K",
+        "long_name": "2 metre temperature"
+      }
+    }
+  },
+  "assets": {
+    "zarr-store": {
+      "href": "/home/kaleem/projects/weather-modernisation-lab/data/zarr/era5_uk.zarr",
+      "type": "application/vnd+zarr",
+      "roles": [
+        "data"
+      ]
+    }
+  }
+}

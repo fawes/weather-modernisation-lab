@@ -1,0 +1,94 @@
+{
+  "stac_version": "1.0.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/datacube/v2.2.0/schema.json"
+  ],
+  "type": "Feature",
+  "id": "north-sea-wave",
+  "bbox": [
+    -6.0,
+    50.0,
+    8.0,
+    62.0
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -6.0,
+          50.0
+        ],
+        [
+          8.0,
+          50.0
+        ],
+        [
+          8.0,
+          62.0
+        ],
+        [
+          -6.0,
+          62.0
+        ],
+        [
+          -6.0,
+          50.0
+        ]
+      ]
+    ]
+  },
+  "properties": {
+    "title": "North Sea Marine Wave & Wind Hazard Cube (swh, u10, v10, msl)",
+    "description": "Chunked Zarr store for North Sea offshore operations (5.0m SWH threshold).",
+    "start_datetime": "2026-10-20T00:00:00Z",
+    "end_datetime": "2026-10-20T23:00:00Z",
+    "cube:variables": {
+      "msl": {
+        "dimensions": [
+          "time",
+          "latitude",
+          "longitude"
+        ],
+        "units": "hPa",
+        "long_name": "Mean sea level pressure"
+      },
+      "swh": {
+        "dimensions": [
+          "time",
+          "latitude",
+          "longitude"
+        ],
+        "units": "m",
+        "long_name": "Significant height of combined wind waves and swell"
+      },
+      "u10": {
+        "dimensions": [
+          "time",
+          "latitude",
+          "longitude"
+        ],
+        "units": "m s**-1",
+        "long_name": "10 metre U wind component"
+      },
+      "v10": {
+        "dimensions": [
+          "time",
+          "latitude",
+          "longitude"
+        ],
+        "units": "m s**-1",
+        "long_name": "10 metre V wind component"
+      }
+    }
+  },
+  "assets": {
+    "zarr-store": {
+      "href": "/home/kaleem/projects/weather-modernisation-lab/data/zarr/north_sea_wave.zarr",
+      "type": "application/vnd+zarr",
+      "roles": [
+        "data"
+      ]
+    }
+  }
+}

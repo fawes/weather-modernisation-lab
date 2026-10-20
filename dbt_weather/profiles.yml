@@ -1,0 +1,7 @@
+dbt_weather:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: '../data/lakehouse/weather_lakehouse.duckdb'
+      threads: 4

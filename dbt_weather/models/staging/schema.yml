@@ -1,0 +1,40 @@
+version: 2
+
+sources:
+  - name: raw_weather
+    schema: raw_weather
+    tables:
+      - name: uk_energy_forecasts_latest
+      - name: uk_energy_forecasts_v0
+
+models:
+  - name: stg_uk_energy_forecasts
+    description: "Cleaned & standardized hourly UK energy forecasts from latest ECMWF run"
+    columns:
+      - name: asset_id
+        tests:
+          - not_null
+      - name: asset_type
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['Offshore_Wind', 'Trading_Hub', 'Solar_Park']
+      - name: temp_c
+        tests:
+          - not_null
+      - name: pressure_hpa
+        tests:
+          - not_null
+  - name: mart_uk_trading_desk_alerts
+    description: "Gold Mart table for BP/Energy Trading Desk comparing 12z vs 00z runs"
+    columns:
+      - name: asset_id
+        tests:
+          - unique
+          - not_null
+      - name: risk_level
+        tests:
+          - accepted_values:
+              arguments:
+                values: ['CRITICAL_STORM_RISK', 'ELEVATED_HEATING_DEMAND', 'NORMAL_OPERATIONS']

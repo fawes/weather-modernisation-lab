@@ -1,0 +1,17 @@
+.venv/
+__pycache__/
+*.pyc
+
+# Raw & Binary Data Stores (Generated locally by scripts 01-10)
+data/raw/
+data/zarr/
+data/lakehouse/
+
+# Keep visual architecture diagrams (.png), STAC JSON, and Snowflake SQL for portfolio!
+data/output/*.csv
+data/output/*.parquet
+
+# dbt generated target/logs folders
+dbt_weather/target/
+dbt_weather/logs/
+dbt_weather/dbt_packages/

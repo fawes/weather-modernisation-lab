@@ -1,0 +1,23 @@
+{
+  "type": "Catalog",
+  "stac_version": "1.0.0",
+  "id": "uk-weather-intelligence-stac",
+  "title": "Modernized Weather Intelligence Platform STAC Catalog",
+  "description": "Cloud-native SpatioTemporal Asset Catalog indexing Zarr weather cubes.",
+  "links": [
+    {
+      "rel": "self",
+      "href": "./catalog.json"
+    },
+    {
+      "rel": "item",
+      "href": "./era5-uk.json",
+      "title": "ECMWF ERA5 UK Surface Meteorology Cube (t2m, msl)"
+    },
+    {
+      "rel": "item",
+      "href": "./north-sea-wave.json",
+      "title": "North Sea Marine Wave & Wind Hazard Cube (swh, u10, v10, msl)"
+    }
+  ]
+}
