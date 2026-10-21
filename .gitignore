@@ -1,6 +1,7 @@
 .venv/
 __pycache__/
 *.pyc
+*.docx
 
 # Raw & Binary Data Stores (Generated locally by scripts 01-10)
 data/raw/

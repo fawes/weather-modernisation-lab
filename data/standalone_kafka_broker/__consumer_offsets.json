@@ -1,0 +1,22 @@
+{
+  "cg_stream_processor_v1": {
+    "uk.offshore.telemetry.raw": {
+      "partition-0": -1,
+      "partition-1": 23,
+      "partition-2": 12
+    }
+  },
+  "cg_digital_twin_projector": {
+    "uk.offshore.asset.eventsourcing": {
+      "partition-0": 3,
+      "partition-1": -1
+    }
+  },
+  "cg_lakehouse_parquet_sink": {
+    "uk.offshore.telemetry.raw": {
+      "partition-0": -1,
+      "partition-1": 23,
+      "partition-2": 12
+    }
+  }
+}
