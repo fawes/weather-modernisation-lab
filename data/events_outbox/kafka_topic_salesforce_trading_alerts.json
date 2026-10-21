@@ -1,10 +1,10 @@
 [
   {
     "specversion": "1.0",
-    "id": "4e925ee8-f742-46c1-8dd2-f6879a436f2e",
+    "id": "de4412b4-f190-4c6d-aaf5-3c400886cbd4",
     "source": "urn:weather-platform:dbt-gold-mart",
     "type": "com.energy.salesforce.trading.hdd_revision_alert",
-    "time": "2026-10-20T19:53:57.422637+00:00",
+    "time": "2026-10-21T14:54:27.234704+00:00",
     "datacontenttype": "application/json",
     "kafka_topic": "salesforce.crm.energy_trading_alert",
     "kafka_partition_key": "UK-WIND-01",
@@ -22,10 +22,10 @@
   },
   {
     "specversion": "1.0",
-    "id": "5b127054-9e59-4438-8822-3d18397e4ad9",
+    "id": "2dafad3e-2ce9-4a69-8e7b-108a2ed877fc",
     "source": "urn:weather-platform:dbt-gold-mart",
     "type": "com.energy.salesforce.trading.hdd_revision_alert",
-    "time": "2026-10-20T19:53:57.422704+00:00",
+    "time": "2026-10-21T14:54:27.234763+00:00",
     "datacontenttype": "application/json",
     "kafka_topic": "salesforce.crm.energy_trading_alert",
     "kafka_partition_key": "UK-WIND-02",
