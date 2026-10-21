@@ -1,0 +1,30 @@
+# Simulates High-Availability Load Balancing across Stateless OGC Weather API Replicas
+version: "3.9"
+
+services:
+  ogc-weather-api-1:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    environment:
+      - INSTANCE_ID=replica-az-a
+    expose:
+      - "8000"
+
+  ogc-weather-api-2:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    environment:
+      - INSTANCE_ID=replica-az-b
+    expose:
+      - "8000"
+
+  # Layer-7 Reverse Proxy / Load Balancer (Local equivalent of AWS ALB / GCP Load Balancer)
+  alb-load-balancer:
+    image: nginx:1.27-alpine
+    ports:
+      - "8080:80"
+    depends_on:
+      - ogc-weather-api-1
+      - ogc-weather-api-2

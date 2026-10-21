@@ -1,0 +1,44 @@
+{
+  "dag_id": "uk_north_sea_weather_intelligence_v2",
+  "executed_at_utc": "2026-10-21T14:54:27.783563+00:00",
+  "total_duration_sec": 17.3,
+  "overall_status": "SUCCESS_ALL_DATAOPS_GATES_PASSED",
+  "tasks": [
+    {
+      "task_id": "1_ingest_and_build_zarr",
+      "stage": "Gridded Zarr & Lakehouse Prep",
+      "status": "SUCCESS",
+      "duration_sec": 3.71
+    },
+    {
+      "task_id": "2_commit_acid_delta_table",
+      "stage": "Delta Lake 00z/12z Time-Travel",
+      "status": "SUCCESS",
+      "duration_sec": 1.63
+    },
+    {
+      "task_id": "3_dbt_elt_and_quality_gate",
+      "stage": "dbt Marts + 8 DataOps Circuit Breakers",
+      "status": "SUCCESS",
+      "duration_sec": 6.48
+    },
+    {
+      "task_id": "4_north_sea_wave_5m_hazards",
+      "stage": "North Sea Wave Zarr & 5m Breach Calc",
+      "status": "SUCCESS",
+      "duration_sec": 3.13
+    },
+    {
+      "task_id": "5_stac_and_ogc_edr_api",
+      "stage": "STAC Catalog & FastAPI OGC Smoke Test",
+      "status": "SUCCESS",
+      "duration_sec": 1.33
+    },
+    {
+      "task_id": "6_kafka_camel_event_router",
+      "stage": "CloudEvents Router -> SAP & Salesforce",
+      "status": "SUCCESS",
+      "duration_sec": 1.02
+    }
+  ]
+}
